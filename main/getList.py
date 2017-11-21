@@ -16,8 +16,8 @@ lenth=0
 # 写入操作
 w = Workbook(encoding="utf-8")
 ws = w.add_sheet("sheet1", cell_overwrite_ok=True)
-for i in range(1,25):
-    url = "http://www.dianping.com/search/keyword/1/0_%E5%92%96%E5%95%A1%E5%8E%85/r3p"+str(i)+"?aid=92145801%2C79214993%2C8371118"
+for i in range(1,3):
+    url = "http://www.dianping.com/search/keyword/1/0_%E5%92%96%E5%95%A1%E5%8E%85/c3580p"+str(i)
     try:
         re1 = request.Request(url)
         # 把爬虫伪装成浏览器
@@ -51,4 +51,4 @@ for i in range(lenth):
     ws.write(i, 1, listStr[i])
 
 
-w.save("../resouce/excel/jingan.xls")
+w.save("../resouce/excel/chongming.xls")
